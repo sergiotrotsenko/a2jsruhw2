@@ -1,3 +1,11 @@
 <h1>
   {{title}}
+  <input type="text" placeholder="Enter city" [formControl]="searchInput" />
+  <h3>{{city}}</h3>
+  <div *ngFor="let day of daysForecast;">
+    <span>{{day.dt_txt}} </span>
+    <span> Temperature is {{day.temp}} </span>
+    <span> Humidity: {{day.humidity}} %</span>
+    <span> Clouds: {{day.description}}</span>
+  </div>
 </h1>
